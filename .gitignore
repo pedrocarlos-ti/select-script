@@ -22,3 +22,12 @@ build/
 # Ignore OS generated files
 .DS_Store
 Thumbs.db
+
+# VSCode files 
+.vscode-test/
+
+# Dist directory
+dist/
+
+# Out directory
+out/
