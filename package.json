@@ -1,8 +1,12 @@
 {
   "name": "selectscript",
-  "publisher": "melro.io",
+  "publisher": "melro-io",
   "displayName": "SelectScript",
   "description": "Quick and intuitive dropdown selector for your package.json scripts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrocarlos-ti/select-script"
+  },
   "keywords": [
     "npm",
     "scripts",
@@ -81,5 +85,6 @@
     "eslint": "^9.13.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.6.3"
-  }
+  },
+  "license": "MIT"
 }
