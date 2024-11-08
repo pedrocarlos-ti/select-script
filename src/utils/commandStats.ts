@@ -58,65 +58,48 @@ export class CommandStats {
     scripts: Record<string, string>
   ): ScriptQuickPickItem[] {
     const items: ScriptQuickPickItem[] = [];
-    const topCommands = this.getTopCommands();
+    const topCommands = this.getTopCommands(3);
     const topCommandNames = new Set(topCommands.map((c) => c.command));
 
-    // Only add frequently used section if we have usage data
-    if (topCommands.length > 0) {
-      // Add "Frequently Used" section
-      items.push({
-        kind: vscode.QuickPickItemKind.Separator,
-        label: "Frequently Used",
-      });
-
-      // Add top commands with usage count and script details
-      topCommands.forEach((stat) => {
-        if (scriptNames.includes(stat.command)) {
-          items.push({
-            label: stat.command,
-            detail: scripts[stat.command],
-            description: `Used ${stat.count} ${
-              stat.count === 1 ? "time" : "times"
-            }`,
-            buttons: [
-              {
-                iconPath: new vscode.ThemeIcon("play"),
-                tooltip: "Run Script",
-              },
-            ],
-          });
-        }
-      });
-    }
-
-    // Add "Other Scripts" section
-    items.push({
-      kind: vscode.QuickPickItemKind.Separator,
-      label: "Other Scripts",
-    });
-
-    // Add remaining scripts
-    scriptNames
-      .filter((name) => !topCommandNames.has(name))
-      .sort((a, b) => a.localeCompare(b))
-      .forEach((name) => {
+    // Get all scripts with their usage stats
+    const allScripts = scriptNames
+      .map((name) => {
         const usageStats = this.stats.find((s) => s.command === name);
-        items.push({
-          label: name,
-          detail: scripts[name],
-          description: usageStats
-            ? `Used ${usageStats.count} ${
-                usageStats.count === 1 ? "time" : "times"
-              }`
-            : undefined,
-          buttons: [
-            {
-              iconPath: new vscode.ThemeIcon("play"),
-              tooltip: "Run Script",
-            },
-          ],
-        });
+        return {
+          name,
+          count: usageStats?.count || 0,
+          usageStats,
+        };
+      })
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+
+    // Add all scripts first
+    allScripts.forEach(({ name, usageStats }) => {
+      items.push({
+        label: name,
+        detail: scripts[name],
+        description: usageStats
+          ? `Used ${usageStats.count} ${
+              usageStats.count === 1 ? "time" : "times"
+            }`
+          : undefined,
+        buttons: [
+          {
+            iconPath: new vscode.ThemeIcon("play"),
+            tooltip: "Run Script",
+          },
+        ],
       });
+
+      // Insert the "Frequently Used" separator after the third item
+      if (items.length === 3 && topCommands.length > 0) {
+        // Add "Other Scripts" separator
+        items.push({
+          kind: vscode.QuickPickItemKind.Separator,
+          label: "Other Scripts",
+        });
+      }
+    });
 
     return items;
   }
