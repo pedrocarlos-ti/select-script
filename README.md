@@ -1,43 +1,67 @@
 # Select Script
 
-Effortlessly run your npm scripts directly from VS Code. SelectScript provides a clean, efficient dropdown interface to execute package.json scripts without leaving your editor.
+Effortlessly run your scripts directly from VS Code, regardless of your package manager. SelectScript provides a clean, efficient dropdown interface to execute scripts from package.json without leaving your editor.
 
 ## Features
 
-✨ Dropdown menu button in the VS Code toolbar
-
-🔥 Keyboard shortcut: Ctrl+Shift+1 to open the script selection menu
+✨ Smart package manager detection (npm, yarn, pnpm)
 
 🎯 Dedicated terminal for script execution
 
+🔥 Keyboard shortcut: Ctrl+Shift+1 (Cmd+Shift+1 on Mac)
+
 ⚡ Native VS Code selection experience
+
+📊 Frequently used scripts tracking
 
 🔍 Automatic package.json detection
 
 ## Usage
 
-### Dropdown Button
+### Quick Access Button
 
-1. Click the "SelectScript" button in the VS Code toolbar
-2. Choose the script you want to run from the dropdown menu
+1. Click the play icon (▶️) in the VS Code status bar
+2. Choose a script from the dropdown menu (frequently used scripts appear first)
 3. Watch the script execute in a dedicated terminal
 
 ### Keyboard Shortcut
 
-1. Press Ctrl+Shift+1 to open the script selection menu
+1. Press Ctrl+Shift+1 (Cmd+Shift+1 on Mac) to open the script selection menu
 2. Select the script you want to run
 3. The script will execute in a dedicated terminal
 
+## Smart Package Manager Detection
+
+SelectScript automatically detects your project's package manager:
+
+- `yarn` - If yarn.lock is present
+- `pnpm` - If pnpm-lock.yaml is present
+- `npm` - Default, or if package-lock.json is present
+
+Commands are automatically adjusted based on your package manager:
+
+- npm: `npm run script-name`
+- yarn: `yarn script-name`
+- pnpm: `pnpm script-name`
+
 ## Why SelectScript?
 
-Stop searching through package.json or remembering complex script names. SelectScript brings a convenient, easily accessible interface to your npm scripts, making development workflows faster and more efficient.
+Stop searching through package.json or remembering complex script names. SelectScript brings a convenient, easily accessible interface to your scripts, making development workflows faster and more efficient.
 
 Perfect for:
 
 - Frontend developers managing multiple build scripts
-- Teams with standardized npm commands
+- Teams using different package managers
 - Projects with numerous custom scripts
-- Anyone who wants quick access to their npm scripts
+- Anyone who wants quick access to their project scripts
+
+## Features in Detail
+
+- **Smart Script Organization**: Frequently used scripts appear at the top for quick access
+- **Script Details**: View the full command when selecting a script
+- **Usage Statistics**: Track how often you use each script
+- **Dedicated Terminal**: Scripts run in a dedicated "Script Runner" terminal
+- **Cross-Platform**: Works on Windows, macOS, and Linux
 
 ## Installation
 
