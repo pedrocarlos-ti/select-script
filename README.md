@@ -1,71 +1,55 @@
-# selectscript README
+# SelectScript
 
-This is the README for your extension "selectscript". After writing up a brief description, we recommend including the following sections.
+Effortlessly run your npm scripts directly from VS Code. SelectScript provides a clean, efficient dropdown interface to execute package.json scripts without leaving your editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+✨ Dropdown menu button in the VS Code toolbar
 
-For example if there is an image subfolder under your extension project workspace:
+🔥 Keyboard shortcut: Ctrl+Shift+1 to open the script selection menu
 
-\!\[feature X\]\(images/feature-x.png\)
+🎯 Dedicated terminal for script execution
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+⚡ Native VS Code selection experience
 
-## Requirements
+🔍 Automatic package.json detection
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Usage
 
-## Extension Settings
+### Dropdown Button
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Click the "SelectScript" button in the VS Code toolbar
+2. Choose the script you want to run from the dropdown menu
+3. Watch the script execute in a dedicated terminal
 
-For example:
+### Keyboard Shortcut
 
-This extension contributes the following settings:
+1. Press Ctrl+Shift+1 to open the script selection menu
+2. Select the script you want to run
+3. The script will execute in a dedicated terminal
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Why SelectScript?
 
-## Known Issues
+Stop searching through package.json or remembering complex script names. SelectScript brings a convenient, easily accessible interface to your npm scripts, making development workflows faster and more efficient.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Perfect for:
 
-## Release Notes
+- Frontend developers managing multiple build scripts
+- Teams with standardized npm commands
+- Projects with numerous custom scripts
+- Anyone who wants quick access to their npm scripts
 
-Users appreciate release notes as you update your extension.
+## Installation
 
-### 1.0.0
+1. Open the Extensions view in VS Code (Ctrl+Shift+X)
+2. Search for "SelectScript" and click "Install"
+3. Reload VS Code when prompted
 
-Initial release of ...
+## Feedback and Support
 
-### 1.0.1
+We appreciate your feedback! If you have any questions, issues, or feature requests, please don't hesitate to reach out:
 
-Fixed issue #.
+- [Submit an issue on GitHub](https://github.com/your-username/selectscript/issues/new)
+- [Contact the extension maintainers](mailto:selectscript@example.com)
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Thank you for using SelectScript!
