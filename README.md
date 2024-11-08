@@ -1,4 +1,4 @@
-# SelectScript
+# Select Script
 
 Effortlessly run your npm scripts directly from VS Code. SelectScript provides a clean, efficient dropdown interface to execute package.json scripts without leaving your editor.
 
@@ -49,7 +49,7 @@ Perfect for:
 
 We appreciate your feedback! If you have any questions, issues, or feature requests, please don't hesitate to reach out:
 
-- [Submit an issue on GitHub](https://github.com/your-username/selectscript/issues/new)
-- [Contact the extension maintainers](mailto:selectscript@example.com)
+- [Submit an issue on GitHub](https://github.com/pedrocarlos-ti/select-script/issues/new)
+- [Contact the extension maintainers](mailto:pedrocarlos.ti@gmail.com)
 
 Thank you for using SelectScript!
