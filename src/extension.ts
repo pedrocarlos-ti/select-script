@@ -120,8 +120,8 @@ export function activate(context: vscode.ExtensionContext) {
     10000
   );
   statusBarItem.command = "extension.runNpmScript";
-  statusBarItem.text = "$(play) SelectScript";
-  statusBarItem.tooltip = "Click to run NPM scripts";
+  statusBarItem.text = "$(play)";
+  statusBarItem.tooltip = "Click to run a script";
   // statusBarItem.backgroundColor = new vscode.ThemeColor(
   //   "statusBarItem.warningBackground"
   // );
