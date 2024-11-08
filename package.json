@@ -2,20 +2,45 @@
   "name": "selectscript",
   "displayName": "SelectScript",
   "description": "Quick and intuitive dropdown selector for your package.json scripts",
+  "keywords": [
+    "npm",
+    "scripts",
+    "package.json",
+    "runner",
+    "dropdown",
+    "quickpick",
+    "terminal"
+  ],
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.95.0"
+    "vscode": "^1.93.1"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "workspaceContains:package.json"
+  ],
   "contributes": {
     "commands": [
       {
-        "command": "selectscript.helloWorld",
-        "title": "Hello World"
+        "command": "extension.runNpmScript",
+        "title": "SelectScript: Run NPM Script"
+      },
+      {
+        "command": "extension.runNpmScriptFromCommandPalette",
+        "title": "SelectScript: Run NPM Script from Command Palette"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.runNpmScriptFromCommandPalette",
+        "key": "shift+1",
+        "mac": "shift+cmd+1",
+        "win": "shift+ctrl+1",
+        "linux": "shift+ctrl+1"
       }
     ]
   },
@@ -31,10 +56,11 @@
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "hello": "echo 'Hello, World!'"
   },
   "devDependencies": {
-    "@types/vscode": "^1.95.0",
+    "@types/vscode": "^1.93.1",
     "@types/mocha": "^10.0.9",
     "@types/node": "20.x",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
