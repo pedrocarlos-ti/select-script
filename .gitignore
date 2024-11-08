@@ -31,3 +31,6 @@ dist/
 
 # Out directory
 out/
+
+# Test workspace
+test-workspace/
