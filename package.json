@@ -17,7 +17,7 @@
     "quickpick",
     "terminal"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.93.1"
   },
