@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/pedrocarlos-ti/select-script"
   },
+  "icon": "icon.png",
   "keywords": [
     "npm",
     "scripts",
@@ -16,7 +17,7 @@
     "quickpick",
     "terminal"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.93.1"
   },
