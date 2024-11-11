@@ -1,5 +1,7 @@
 # Select Script
 
+![Intro GIF](https://github.com/pedrocarlos-ti/select-script/blob/main/intro.gif)
+
 Effortlessly run your scripts directly from VS Code, regardless of your package manager. SelectScript provides a clean, efficient dropdown interface to execute scripts from package.json without leaving your editor.
 
 ## Features
